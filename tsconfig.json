@@ -15,7 +15,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
