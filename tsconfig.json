@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    // "declaration": true,
-    // "declarationDir": "./types",
     "allowJs": true,
+    "allowUnreachableCode": false,
     "alwaysStrict": true,
+    "declaration": true,
+    "declarationDir": "types",
     "esModuleInterop": true,
-    // "forceConsistentCasingInFileNames": true,
-    // "incremental": true,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "lib": [
       "dom",
@@ -14,16 +14,21 @@
     ],
     "module": "esnext",
     "moduleResolution": "node",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
     "outDir": "./dist",
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "sourceMap": true,
     "strict": true,
     "target": "es6"
   },
   "exclude": [
     "node_modules",
-    "tests"
+    "tests",
+    "./types/**/*",
+    "./dist/**/*",
+    "./typescript"
   ],
   "include": [
     "**/*.ts"
