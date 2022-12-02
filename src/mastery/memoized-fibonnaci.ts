@@ -1,5 +1,5 @@
 
-function memoize(fn) {
+export function memoize(fn) {
   const cache = new Map();
 
   const cached = function (val) {
@@ -26,8 +26,3 @@ export function fibonacci(n: number): number[] | null {
     []
   );
 }
-
-const memoFibonacci = memoize(fibonacci);
-
-memoFibonacci(100); /*?.*/
-memoFibonacci(100); /*?.*/
