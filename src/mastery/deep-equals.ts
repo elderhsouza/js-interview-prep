@@ -27,6 +27,7 @@ Hints
     Ability to reuse code
 */
 
+//TODO: add support for Map, Set, Date and maybe Regex?
 export function deepEquals(a: unknown, b: unknown): boolean {
   if (typeof a !== typeof b) {
     return false;
@@ -48,7 +49,7 @@ export function deepEquals(a: unknown, b: unknown): boolean {
       return true;
     }
 
-    if  (keyCountA !== keyCountB) {
+    if (keyCountA !== keyCountB) {
       return false;
     }
 
