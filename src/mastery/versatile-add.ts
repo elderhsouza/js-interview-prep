@@ -43,16 +43,14 @@ add()()()()(10)(12); // -> 22
 add()(3)()(4); // -> 7
 add()()()()()(10)()()()(12); // -> 22
 
+Examples:
+versatileAdd(3, 4)                   -> 7
+versatileAdd(3)(4)                   -> 7
+versatileAdd(3)()()()(4)             -> 7
+versatileAdd()()()()()(10)()()()(12) -> 22
+
 Hints
   Start with what you know and work down the examples.
-*/
-
-/*
-Examples:
-  versatileAdd(3, 4)                   -> 7
-  versatileAdd(3)(4)                   -> 7
-  versatileAdd(3)()()()(4)             -> 7
-  versatileAdd()()()()()(10)()()()(12) -> 22
 */
 
 /*TODO
@@ -62,14 +60,10 @@ fix TS error: Argument of type 'number' is not assignable to parameter of type '
     - versatileAdd()(3 <- error)(4)
 */
 
-export function versatileAdd(...numbers: number[]): FunctionConstructor {
-  return curry(add, 2, ...numbers);
-}
+import { curry } from '../functional/curry';
 
-export function curry(fn,  arity: number = fn.length, ...args) {
-  return arity <= args.length
-    ? fn(...args)
-    : curry.bind(null, fn, arity, ...args);
+export function versatileAdd(...numbers: number[]) {
+  return curry(add, 2, ...numbers);
 }
 
 export function myAdd(a = 0, b = 0): number {
@@ -78,7 +72,8 @@ export function myAdd(a = 0, b = 0): number {
 
 //---
 
-export function add(num1, num2) {
+// with built-in currying
+export function add(num1: number, num2: number) {
   if(num1 === undefined) {
     return add;
   }
