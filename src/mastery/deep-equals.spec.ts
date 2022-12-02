@@ -13,11 +13,11 @@ describe('deepEquals', () => {
     expect(deepEquals(undefined, undefined)).toBe(true);
   });
 
-  test('same value numbers are equal', () => {
+  test('same numbers are equal', () => {
     expect(deepEquals(123, 123)).toBe(true);
   });
 
-  test('same value strings are equal', () => {
+  test('same strings are equal', () => {
     expect(deepEquals('abc', 'abc')).toBe(true);
   });
 
@@ -29,7 +29,7 @@ describe('deepEquals', () => {
     expect(deepEquals(123, 'abc')).toBe(false);
   });
 
-  test('different value numbers are unequal', () => {
+  test('different numbers are unequal', () => {
     expect(deepEquals(123, 456)).toBe(false);
   });
 
