@@ -26,9 +26,9 @@
   "exclude": [
     "node_modules",
     "tests",
-    "./types/**/*",
-    "./dist/**/*",
-    "./typescript"
+    "./types",
+    "./dist",
+    "./src/typescript"
   ],
   "include": [
     "**/*.ts"
