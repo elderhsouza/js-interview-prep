@@ -64,3 +64,14 @@ export function deepEquals(a: unknown, b: unknown): boolean {
 
   return Object.is(a, b);
 }
+
+deepEquals(
+  {
+    a: 123,
+    b: ['abc', { a: null, b: [undefined, [NaN]] }]
+  },
+  {
+    a: 123,
+    b: ['abc', { a: null, b: [undefined, [NaN]] }]
+  }
+); //?.  $

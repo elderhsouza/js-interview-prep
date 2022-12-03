@@ -23,7 +23,7 @@ There’s no way to get around that so the best time complexity we can hope for 
 */
 
 export function recursiveFlatten(nestedArray: unknown[]): unknown[] {
-  const flattened = [];
+  const flattened: unknown[] = [];
 
   for (const element of nestedArray) {
     if (Array.isArray(element)) {

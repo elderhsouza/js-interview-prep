@@ -90,7 +90,7 @@ class BeeKeeper {
 }
 
 class ZooKeeper {
-  nameTag = 'Mikle';
+  nameTag = 'Mike';
 }
 
 class Animal {

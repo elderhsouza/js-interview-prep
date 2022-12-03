@@ -17,7 +17,7 @@ isBalanced("[{]}"); // -> false
 */
 
 export function isBalanced1(string: string): boolean {
-  const openStack = [];
+  const openStack: string[] = [];
   const open = '([{';
   const close = ')]}';
   const matches: Record<string, string>= {

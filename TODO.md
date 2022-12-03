@@ -20,7 +20,4 @@ Features
     - Variable declaration
 
 Issues
-- Fix typings for
-  - balanced-brackets
-  - flatten
 
